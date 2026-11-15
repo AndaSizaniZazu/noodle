@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/api/">
+    <Project Path="api/Noodle.Api.Tests/Noodle.Api.Tests.csproj" />
+    <Project Path="api/Noodle.Api/Noodle.Api.csproj" />
+  </Folder>
+</Solution>
