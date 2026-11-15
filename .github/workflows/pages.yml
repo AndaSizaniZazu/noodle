@@ -29,7 +29,8 @@ jobs:
           node-version: 22
           cache: npm
           cache-dependency-path: web/package-lock.json
-      - run: npm ci
+      # npm ci fails here: a lock file made on Windows misses some Linux-only optional packages (npm bug).
+      - run: npm install --no-audit --no-fund
       - run: npm run build
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
